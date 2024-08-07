@@ -1,4 +1,4 @@
-# Quick Start Guide
+# Quick Start
 
 ## Introduction
 
@@ -12,6 +12,14 @@ Before you begin, ensure you have installed the Leeroo client library and config
 pip install leeroo-client
 ```
 
+or install from source by:
+
+```bash
+git clone https://github.com/Leeroo-AI/leeroo-client
+cd leeroo-client 
+pip install -e .
+```
+
 ## Getting Started
 
 ### Initializing the Leeroo Client
@@ -20,7 +28,7 @@ Import the necessary libraries and initialize the Leeroo client with your creden
 
 ```python
 import os
-from leeroo_client import LeerooClient
+from leeroo_client.client import LeerooClient
 
 # Initialize the Leeroo client
 client = LeerooClient(user_id="your_user_id", api_key="your_api_key")
@@ -31,13 +39,22 @@ Replace `"your_user_id"` and `"your_api_key"` with your actual credentials obtai
 
 ### Initializing a Workflow with Seed Data
 
-Initialize a new workflow by providing a task description and a unique name. This step sets up the initial configuration for your workflow.
+Initialize a new workflow by providing a evaluation criteria, a unique name, and path of your seed data. This step sets up the initial configuration for your workflow.
 
 ```python
 # Initialize workflow: uploading seed data
 workflow_configs = client.initialize_workflow_configs(
-    task_description="The AI Customer Care Chat Assistant role at SkyView Travel focuses on enhancing customer experiences through intelligent interaction handling. Trained on extensive travel-related conversational data, this assistant excels in providing personalized travel recommendations, resolving booking queries, and ensuring seamless journey planning. Utilizing advanced natural language processing techniques, it offers empathetic and efficient customer support, aiming to deliver exceptional service with each interaction.",
-    workflow_name="SkyView Travel Model"
+    evaluation_criteria="""
+    - Assess clarity of the response by determining if the response is well-structured and easy to understand.
+    - Evaluate accuracy by verifying the correctness of the mathematical content and solutions.
+    - Check completeness by ensuring that the response addresses all parts of the question thoroughly.
+    - Finally, judge pedagogical effectiveness by considering if the explanation is insightful and promotes understanding, 
+    utilizing examples and step-by-step reasoning where appropriate.
+    
+    Each response should be rated on these aspects to ensure a comprehensive evaluation.""",
+    workflow_name="math_tutor_test",
+    seed_data_path='math_tutor_data.json",
+    budget=2,
 )
 print("Initialized workflow configurations:", workflow_configs)
 ```

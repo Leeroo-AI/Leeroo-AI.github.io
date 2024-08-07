@@ -27,6 +27,9 @@ theme:
   logo: "https://www.leeroo.com/wp-content/uploads/2024/03/Layer_1.svg"
 
 plugins:
+  - redirects:
+      redirect_maps:
+        'index.md': 'index.md'
   - search
 
 extra_css:

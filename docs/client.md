@@ -1,3 +1,3 @@
 # Python API Reference
 
-::: leeroo_client.client.LeerooClient
+::: leeroo-client.leeroo_client.client.LeerooClient

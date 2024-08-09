@@ -1,5 +1,3 @@
-# Leeroo Dager
+# Python API Reference
 
-## Python Client 
-
-::: dager.clients.client.LeerooClient
+::: leeroo_client.client.LeerooClient

@@ -17,7 +17,7 @@ jobs:
         with:
           key: ${{ github.ref }}
           path: .cache
-      - run: git clone https://github.com/Leeroo-AI/leeroo-client
+      - run: pip install leeroo-client
       - run: npx embedme "docs/**/*.md"
       - run: pip install mkdocs-material mkdocs-redirects
       - run: mkdocs gh-deploy --force -f mkdocs.yaml

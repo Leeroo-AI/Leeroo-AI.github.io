@@ -28,7 +28,11 @@ theme:
 
 plugins:
   - search
-
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [ "leeroo_client" ]
+          
 extra_css:
   - stylesheets/extra.css
 

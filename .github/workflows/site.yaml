@@ -18,5 +18,5 @@ jobs:
           key: ${{ github.ref }}
           path: .cache
       - run: npx embedme "docs/**/*.md"
-      - run: pip install mkdocs-material mkdocs-redirects mkdocstrings
+      - run: pip install mkdocs-material mkdocs-redirects mkdocstrings mkdocstrings-python
       - run: mkdocs gh-deploy --force -f mkdocs.yaml

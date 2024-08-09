@@ -3,6 +3,7 @@ site_url: "https://leeroo-ai.github.io"
 
 nav:
   - Overview: 
+    - Main: index.md
     - Quick Start : quick_start.md
     - Documentation : client.md
 
@@ -28,11 +29,8 @@ theme:
 
 plugins:
   - search
-  - mkdocstrings:
-      handlers:
-        python:
-          paths: [ "leeroo_client" ]
-          
+  - mkdocstrings
+
 extra_css:
   - stylesheets/extra.css
 

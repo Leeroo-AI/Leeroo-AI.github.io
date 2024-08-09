@@ -5,7 +5,7 @@ nav:
   - Overview: 
     - Main: index.md
     - Quick Start : quick_start.md
-    - Documentation : client.md
+    - Python API Reference : client.md
 
 theme:
   name: material

@@ -1,3 +1,6 @@
 [submodule "leeroo-client"]
 	path = leeroo-client
 	url = git@github.com:Leeroo-AI/leeroo-client.git
+[submodule "leeroo_client"]
+	path = leeroo_client
+	url = git@github.com:Leeroo-AI/leeroo-client.git

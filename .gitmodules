@@ -1,0 +1,3 @@
+[submodule "leeroo-client"]
+	path = leeroo-client
+	url = git@github.com:Leeroo-AI/leeroo-client.git

@@ -19,5 +19,5 @@ jobs:
           path: .cache
       - run: npx embedme "docs/**/*.md"
       - run: pip install mkdocs-material mkdocs-redirects
-      - run: pip install leeeroo-client --upgrade
+      - run: pip install leeroo-client --upgrade
       - run: mkdocs gh-deploy --force -f mkdocs.yaml
